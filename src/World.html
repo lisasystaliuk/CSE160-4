@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 4</title>
+  </head>
+
+  <body onload="main()">
+    <div class="container2">
+      <h1>Build A Sand Tower!</h1>
+    </div>
+    
+    <div class="container">
+      <canvas id="webgl" width="1300" height="750">
+      Please use a browser that supports "canvas"
+      </canvas>
+
+      <div class="slider-container">
+        <div class="container">
+          <p id="performance" style="font-size:12px; ">&nbsp;</p>
+        </div>
+
+        Notes for grader: <br> The colored light is automatically red, adjust the sliders to change the colors. <br>
+        The spotlight is initially out of frame. Back up using the S key or move the spotlight using controls to see it.
+        <h1>Move Player</h1>
+        w: Forwards<br>
+        a: Left<br>
+        s: Backwards<br>
+        d: Right<br>
+        <br>
+        q: Rotate Left<br>
+        e: Rotate Right<br>
+        <br>
+        [space]: Up<br>
+        [shift]: down<br>
+        
+        <h1>Camera Settings</h1>
+        Camera Angle <input type="range" min="-180"  max="180" value="0" class="slider" id="angleSlide">
+        <p>
+
+        <h1>Build and Destroy</h1>
+        v: Build Mode<br>
+        b: Destroy Mode<br>
+        t: Reset Mode<br>
+
+        Click to build and destroy on highlighted blocks.
+      </div>
+
+    </div>
+
+    <div class="container">
+    <p>
+
+    
+  <script>
+      function changeCursor() {
+          document.body.style.cursor = "url('james-davis.png'), auto";
+      }
+    </script>
+    <p>
+    
+
+      
+    <!-- light color slides -->
+    <h1>Light Color Settings</h1>
+    <p>
+      Red Light Slider <input type="range" min="0" max="100" value="100" class="slider" id="redColorSlide">
+    <p>
+      Green Light Slider <input type="range" min="0" max="100" value="0" class="slider" id="greenColorSlide">
+    <p>
+      Blue Light Slider <input type="range" min="0" max="100" value="0" class="slider" id="blueColorSlide">
+    <p>
+      <h1>Light Position</h1>
+    Light X <input type="range" min="-250"  max="250" value="0" class="slider" id="lightSlideX">
+    Light Y <input type="range" min="-250"  max="250" value="100" class="slider" id="lightSlideY">
+    Light Z <input type="range" min="-250"  max="250" value="-200" class="slider" id="lightSlideZ">
+
+    <h1>Spotlight Position</h1><p>
+    Spotlight X <input type="range" min="-250"  max="250" value="0" class="slider" id="spotlightSlideX">
+    Spotlight Y <input type="range" min="-250"  max="250" value="100" class="slider" id="spotlightSlideY">
+    Spotlight Z <input type="range" min="-250"  max="250" value="-200" class="slider" id="spotlightSlideZ">
+    
+    <h1>Normal Settings</h1><p>
+
+    Normal Buttons:
+      <button type = "button" id="normalOn">Normal On</button>
+      <button type = "button" id="normalOff">Normal Off</button>
+
+    <h1>Light Settings</h1><p>
+    Light Buttons:
+      <button type = "button" id="lightOn">Light On</button>
+      <button type = "button" id="lightOff">Light Off</button>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Cone.js"></script>
+    <script src="Camera.js"></script>
+    <script src="World.js"></script>
+
+  </body>
+</html>
